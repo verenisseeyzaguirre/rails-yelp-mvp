@@ -2,8 +2,7 @@
   <%= f.input :name %>
   <%= f.input :address %>
   <%= f.input :phone_number %>
-  <%= f.label :category %>
-  <%= f.select :category, Restaurant::CATEGORIES %>
+  <%= f.input :category, collection: Restaurant::CATEGORIES %>
 
   <%= f.button :submit, class: "btn-primary" %>
   <%#=<%= f.submit %>
