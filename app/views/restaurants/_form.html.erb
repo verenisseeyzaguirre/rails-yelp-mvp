@@ -1,18 +1,10 @@
 <%= simple_form_for(restaurant) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :address %>
-  <%= f.text_field :address %>
-  <%= f.label :phone_number %>
-  <%= f.text_field :phone_number %>
-   <%= f.label :category %>
-  <%= f.select:category, Restaurant::CATEGORIES %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :phone_number %>
+  <%= f.label :category %>
+  <%= f.select :category, Restaurant::CATEGORIES %>
 
-  <%# <% if (task.persisted?) %>
-   <%#  <%= f.label :completed %>
-   <%#  <%= f.check_box :completed %>
-  <%#  <%end%>
-
-
-  <%= f.submit %>
+  <%= f.button :submit, class: "btn-primary" %>
+  <%#=<%= f.submit %>
 <% end %>
